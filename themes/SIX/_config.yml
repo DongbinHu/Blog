@@ -8,16 +8,16 @@ bottom_saying: 虽然还没想好写点什么，但是总觉得这里放句话�
 # Content
 excerpt_link: Read More
 
-rss: /atom.xml
+#rss: /atom.xml
 
 highlightjs: vs
 
 #Works
 works:
-- works_name: AAA
+- works_name: SIX
   works_url: /
-- works_name: BBB
-  works_url: /atom.xml
+- works_name: GOD
+  works_url: /
 
 #duoshuo name
 duoshuo:
