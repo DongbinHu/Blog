@@ -42,3 +42,5 @@ inputoutput&#124;    |   输出
 用法：变量名=>标签名: 自定义内容:>https://www.baidu.com(可选)  
 变量名(right或者left 默认是往下走)->变量名  
 条件有两个流程，一个是yes，一个是no
+
+<npm install --save hexo-filter-flowchart>

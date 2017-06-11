@@ -29,14 +29,11 @@
 .icon-googleplus:before { content: "\e62c"; }
 .icon-googleplus2:before { content: "\e62d"; }
 .icon-google-drive:before { content: "\e62e"; }
-.icon-facebook:before { content: "\e62f"; }
-.icon-twitter:before { content: "\e630"; }
 .icon-feed:before { content: "\e631"; }
 .icon-vimeo2:before { content: "\e632"; }
 .icon-flickr:before { content: "\e633"; }
 .icon-picassa:before { content: "\e634"; }
 .icon-dribbble:before { content: "\e635"; }
-.icon-github:before { content: "\e636"; }
 .icon-apple:before { content: "\e637"; }
 .icon-android:before { content: "\e638"; }
 .icon-file-pdf:before { content: "\e639"; }
@@ -68,7 +65,6 @@
 .icon-cc-pd:before { content: "\e653"; }
 .icon-flickr2:before { content: "\e654"; }
 .icon-vimeo:before { content: "\e655"; }
-.icon-twitter2:before { content: "\e656"; }
 .icon-facebook2:before { content: "\e657"; }
 .icon-googleplus3:before { content: "\e658"; }
 .icon-tumblr:before { content: "\e659"; }
@@ -90,7 +86,12 @@
 .icon-circles:before { content: "\e669"; }
 .icon-vk:before { content: "\e66a"; }
 .icon-smashing:before { content: "\e66b"; }
-
+.icon-github:before { content: "\e6ed"; }
+.icon-zliconweibo01:before { content: "\e64b"; }
+.icon-c:before { content: "\e617"; }
+.icon-tuite:before { content: "\e6a7"; }
+.icon-facebook:before { content: "\e6aa"; }
+.icon-wuxianxinhao:before { content: "\e631"; }
 .fs0 {
 	font-size: 16px;
 }
