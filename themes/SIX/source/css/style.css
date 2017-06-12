@@ -878,6 +878,12 @@ span.sb-caret { /* Caret Down */
 	#hero p {
 		display: none
 	}
+	#hero h2 {
+		color: #f0f0f0;
+		margin-bottom: 10px;
+		display: inline-block;
+		padding: 14px;
+	}
 	#hero .element-img {
     background: url(../img/bg_img_s.jpg) no-repeat center center fixed !important;
     background-size: cover !important;
