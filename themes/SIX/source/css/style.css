@@ -878,6 +878,10 @@ span.sb-caret { /* Caret Down */
 	#hero p {
 		display: none
 	}
+	#hero .element-img {
+    background: url(../img/bg_img_s.jpg) no-repeat center center fixed !important;
+    background-size: cover !important;
+	}
 }
 /********************************************************/
 /* Video Hero                                           */
