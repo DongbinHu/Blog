@@ -7,7 +7,7 @@ title: SIX.BLOG
 subtitle:
 description:
 author: six
-language:
+language: zh-CN
 timezone:
 
 # URL
@@ -71,7 +71,7 @@ tag: 1
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: SIX
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
