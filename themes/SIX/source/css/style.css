@@ -875,9 +875,17 @@ span.sb-caret { /* Caret Down */
 	}
 }
 @media (max-width:767px) {
+  .six-div{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
 	#hero p {
 		display: none
 	}
+  #hero h2 {
+    font-weight:100 !important;
+  }
 	#hero h2 {
 		color: #f0f0f0;
 		margin-bottom: 10px;
