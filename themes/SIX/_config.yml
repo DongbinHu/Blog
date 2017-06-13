@@ -18,11 +18,8 @@ works:
 - works_name: GOD
   works_url: /
 
-#duoshuo name
-duoshuo:
-
 #disqus name
-disqus_shortname:
+disqus_shortname: huliuliu
 
 #fancybox
 fancybox: true
