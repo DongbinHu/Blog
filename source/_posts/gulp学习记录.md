@@ -421,5 +421,12 @@ gulp.task('connect', function() {
         livereload: true
     })
 });
+//在其他任务中调用
+gulp.task('html',function(){
+    gulp.src('html/*.html')
+    .pipe(gulp.dest('six'))
+    .pipe(connect.reload());   //在此处调用connect刷新页面
+});
 ```  
+本文绝大多数从无双的博客里搬来的。侵权删
 以上~
