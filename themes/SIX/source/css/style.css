@@ -84,7 +84,6 @@ h6 {
 	color: #151515;
 }
 h2 {
-	text-transform: uppercase;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 22px;
@@ -141,8 +140,7 @@ a:active,
 a:focus,
 a:visited,
 a:link {
-	color: #151515;
-	text-decoration: none;
+	color: dodgerblue;
 }
 [class*="col-"] {
 	padding-top: 15px;
@@ -153,12 +151,8 @@ a:link {
 @-moz-document url-prefix() {
   fieldset { display: table-cell; }
 }
-blockquote {
-	margin: 40px 0;
-}
 blockquote p {
 	font-family: 'Georgia', "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans CN", "WenQuanYi Micro Hei", Arial, sans-serif;
-	font-style: italic;
 	font-size: 15px;
 }
 blockquote footer {
