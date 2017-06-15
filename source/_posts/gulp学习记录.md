@@ -217,7 +217,9 @@ gulp.task('two',['one'],function(){
 });
 ```  
 > `gulp.task()`就这些了，主要是要知道当依赖是异步任务时的处理  
+
 ----------
+
 ## 3.4 gulp.watch()  
 `gulp.watch()`用来监视文件的变化，当文件发生变化后，我们可以利用它来执行相应的任务，例如文件压缩等。其语法为  
 ```javascript
@@ -246,4 +248,178 @@ gulp.watch('six/seven/*.js',function(event){
 ```  
 如下：  
 ![刚试了一下，还真管用](/img/1.png)
-----------
+
+----------  
+
+# 4、一些常用的gulp插件  
+
+## 4.1 自动加载插件  
+使用`gulp-load-plugins`  
+安装`npm install --save-dev gulp-load-plugins`  
+要使用gulp插件，首先得用`require`来把插件加载进来，如果我们要使用的插件非常多，那我们的`gulpfile.js`就需要引入特别多的插件。虽然这没有什么问题，但我们的`gulpfile.js`会变得特别冗长，看上去不舒服，同时我们也不想写特别多的重复的东西。`gulp-load-plugins`插件正是用来解决这个问题。`gulp-load-plugins`这个插件能自动帮你加载`package.json`文件里的gulp插件。假如你的`package.json`长下面这样：  
+```json
+{
+  "devDependencies": {
+    "gulp": "~3.6.0",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "~0.4.3",
+    "gulp-load-plugins": "~0.5.1"
+  }
+}
+```  
+然后我们可以在`gulpfile.js`中使用`gulp-load-plugins`来帮我们加载插件：  
+```javascript
+var gulp = require('gulp');
+//加载gulp-load-plugins插件并立即运行它
+var plugins = require('gulp-load-plugins')();
+```  
+然后我们要使用gulp-rename和gulp-ruby-sass这两个插件的时候，就可以使用`plugins.rename`和`plugins.rubySass`来代替了，也就是原始插件名去掉`gulp-`前缀，之后再转换成驼峰命名，之后再加上你定义的自动加载插件的名字.即可。
+> 最后要提醒的一点是，因为`gulp-load-plugins`插件是通过你的`package.json`来加载插件的，所以必须保证你需要自动加载的插件已经写到`package.json`文件里，同时已经装好。  
+  
+----------  
+
+## 4.2 重命名  
+使用gulp-rename  
+安装：`npm install --save-dev gulp-rename`  
+用来重命名文件流中的文件，用`gulp.dest()`方法写入文件时，文件名使用的是文件流中的文件名，如果想改变文件名，那可以在之前使用`gulp-rename`插件来改变文件流中的文件名。
+```javascript
+var gulp = require('gulp'),
+    rename = require('gulp-rename'),
+    uglify = require("gulp-uglify");
+gulp.task('rename',function(){
+    gulp.src('js/jquery.js')
+    .pipe(uglify()) //压缩
+    .pipe(rename('jqery.min.js')) //会将jquery.js重命名为jquery.min.js
+    .pipe(gulp.dest('js'));
+    //关于gulp-rename的更多强大的用法请参考https://www.npmjs.com/package/gulp-rename
+});
+```  
+
+----------  
+
+## 4.3 js文件压缩  
+使用gulp-uglify  
+安装：`npm install --save-dev gulp-uglify`  
+用来压缩js文件，使用的是uglify引擎  
+```javascript
+var gulp = require('gulp'),
+    uglify = require("gulp-uglify");
+gulp.task('minify-js', function () {
+    gulp.src('js/*.js') // 要压缩的js文件
+    .pipe(uglify())  //使用uglify进行压缩,更多配置请参考：
+    .pipe(gulp.dest('dist/js')); //压缩后的路径
+});
+```  
+
+----------  
+
+## 4.4 css文件压缩  
+使用gulp-minify-css  
+安装：`npm install --save-dev gulp-minify-css`  
+要压缩css文件时可以使用该插件  
+```javascript
+var gulp = require('gulp'),
+    minifyCss = require('gulp-minify-css');
+gulp.task('mini-css',function() {
+  gulp.src('css/*.css')
+    .pipe(minifyCss())
+    .pipe(gulp.dest('six/css'))
+});
+```  
+
+-------------  
+
+## 4.5 html文件压缩  
+使用gulp-minify-html  
+安装：`npm install --save-dev gulp-minify-html`  
+用来压缩html文件  
+```javascript
+var gulp = require('gulp'),
+    minifyHtml = require("gulp-minify-html");
+ 
+gulp.task('minify-html', function () {
+    gulp.src('html/*.html') // 要压缩的html文件
+    .pipe(minifyHtml()) //压缩
+    .pipe(gulp.dest('dist/html'));
+});
+```  
+
+-------------  
+
+## 4.6 js代码检查  
+使用gulp-jshint  
+安装：`npm install --save-dev gulp-jshint`  
+用来检查js代码  
+```javascript
+var gulp = require('gulp'),
+    jshint = require('gulp-hint');
+gulp.task('jsLint',function() {
+    gulp.src('js/*.js')
+    .pipe(jshint())
+    .pipe(jshint.reporter());
+})
+```  
+
+-----------
+
+## 4.7 文件合并  
+使用gulp-concat
+安装：`npm install --save-dev gulp-concat`  
+用来把多个文件合并为一个文件,我们可以用它来合并js或css文件等，这样就能减少页面的http请求数了  
+```javascript
+var gulp = require('gulp'),
+    concat = require("gulp-concat");
+ 
+gulp.task('concat', function () {
+    gulp.src('js/*.js')  //要合并的文件
+    .pipe(concat('all.js'))  // 合并匹配到的js文件并命名为 "all.js"
+    .pipe(gulp.dest('dist/js'));
+});
+```  
+
+--------
+
+## 4.8 less和sass的编译  
+less使用gulp-less  
+安装：`npm install --save-dev gulp-less`  
+```javascript
+var gulp = require('gulp'),
+    less = require("gulp-less");
+ 
+gulp.task('compile-less', function () {
+    gulp.src('less/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('dist/css'));
+});
+```  
+
+sass使用gulp-sass  
+安装：`npm install --save-dev gulp-sass`  
+```javascript
+var gulp = require('gulp'),
+    sass = require("gulp-sass");
+ 
+gulp.task('compile-sass', function () {
+    gulp.src('sass/*.sass')
+    .pipe(sass())
+    .pipe(gulp.dest('dist/css'));
+});
+```  
+
+-----------
+
+## 4.9 自动刷新  
+使用gulp-connect  
+安装：`npm install --save-dev gulp-connect`  
+```javascript
+var gulp = require('gulp');
+var plugins = require('gulp-load-plugins')();
+
+gulp.task('connect', function() {
+    plugins.connect.server({
+        root: '.',      //还有很多配置参数，详情请见API https://www.npmjs.com/package/gulp-connect
+        livereload: true
+    })
+});
+```  
+以上~
