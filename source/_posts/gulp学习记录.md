@@ -244,4 +244,6 @@ gulp.watch('six/seven/*.js',function(event){
     console.log(event.path);    //变化文件的路径
 });
 ```  
+如下：  
+![刚试了一下，还真管用](/img/1.png)
 ----------
