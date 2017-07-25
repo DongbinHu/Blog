@@ -143,4 +143,43 @@ var person1 = {
 var person2 = person1;
 console.log(person1 == person2);    //true
 ```  
+--------------------------  
 
+*<p style="float:right">2017-07-25</p>*  
+# 2、字符串的扩展
+## 2.1 字符串的遍历器接口
+> ES6为字符串添加了遍历器接口（详见《Iterator》一章），使得字符串可以被for...of循环遍历。  
+  
+```javascript
+var six = '胡东斌';
+for (let i of six){
+    console.log(i);
+}
+//胡
+//东
+//斌
+```  
+
+## 2.2 includes(), startsWith(), endsWith()  
+> 传统上，JavaScript只有indexof方法，可以用来确定一个字符串是否包含在另一个字符串中。ES6又提供了三种新方法。 
+ 
+* includes():返回布尔值，表示是否找到了字符串。
+* startsWith():返回布尔值，表示参数字符串是否在源字符串的头部。
+* endsWith():返回布尔值，表示参数字符串是否在源字符串的尾部。  
+
+```javascript
+var s = 'Hello world!';
+s.includes('o');  //true
+s.startsWith('Hello');  //true
+s.endsWith('!');  //true
+```  
+
+这三个方法都支持第二个参数，表示开始搜索的位置  
+```javascript
+var s = 'Hello world';
+s.includes('o',2);   //true
+s.startsWith('world',6);  //true
+s.endsWith('Hello',5)  //true
+```  
+
+上面代码表示，使用第二个参数`n`时，`endsWith`的行为与其他两个方法有所不同。它针对前`n`个字符，而其他两个方法针对从第`n`个位置开始，直到字符串结束
