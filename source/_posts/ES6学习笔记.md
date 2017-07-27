@@ -143,6 +143,7 @@ var person1 = {
 var person2 = person1;
 console.log(person1 == person2);    //true
 ```  
+
 --------------------------  
 
 *<p style="float:right">2017-07-25</p>*  
