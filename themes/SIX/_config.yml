@@ -13,10 +13,8 @@ highlightjs: vs
 
 #Works
 works:
-- works_name: SIX
-  works_url: /
-- works_name: GOD
-  works_url: /
+- works_name: pretty poem
+  works_url: /poem.html
 
 #disqus name
 disqus_shortname: huliuliu
