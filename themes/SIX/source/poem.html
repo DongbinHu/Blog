@@ -3,10 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <title>pretty poem</title>
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap-glyphicons/1.0/css/bootstrap-glyphicons.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
-<button id="test">测试</button>
+<div class="container">
+  <div class="row poem-table">
+    <div class="col-sm-8 col-sm-offset-2">
+      <table class="table table-striped table-bordered">
+        <caption>pretty poem list</caption>
+        <thead>
+        <tr>
+          <th>题目</th>
+          <th>作者</th>
+          <th width="100px">详情</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>无题</td>
+          <td>苏轼</td>
+          <td>
+            <button type="button" class="btn btn-sm btn-info" id="sushi-wuti">查看</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="poemInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+        <h4 class="modal-title poem-info" id="poemTitle"></h4>
+      </div>
+      <div class="modal-body poem-content">
+        <div class="row">
+          <div class="col-sm-6 col-sm-offset-3" id="poemContent"></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+        </button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal -->
+</div>
 <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/poem.js"></script>
 </body>
 </html>

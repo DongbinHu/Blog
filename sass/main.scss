@@ -1,0 +1,60 @@
+@charset "UTF-8";
+//-----------------------------------------------------
+// 提供所有的基础功能包括：变量设置，@media，基础mixin，animation，reset样式
+// 默认会输出reset样式一份
+//-----------------------------------------------------
+// 导入core中的基础文件
+//-----------------------------------------------------
+@import "./core/core";
+//全局样式及常用样式预定义
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  background: #f0f0f0;
+  &.has-tab {
+    padding-bottom: 60px;
+  }
+  &.has-action {
+    padding-bottom: 58px;
+  }
+}
+
+a {
+  color: $gray3;
+}
+
+.mt0 {
+  margin-top: 0 !important;
+}
+
+.poem-table{
+  margin-top: 40px;
+  caption{
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+}
+
+.poem-info{
+  text-align: center;
+  font-size: 30px;
+  small{
+    font-size: 16px;
+  }
+}
+
+.poem-content{
+  .row div{
+    text-align: center;
+  }
+  p{
+    color: #777;
+    font-size: 20px;
+  }
+}
