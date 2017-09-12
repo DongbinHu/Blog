@@ -171,11 +171,31 @@ $(document).ready(function($) {
 	    }
 
 	}); // Document Ready
+	
+	$('.pay-btn').click(function() {
+		// alert(123);
+    })
 
 }(jQuery)); // End "use strict"
 
 // Enable dropdown sub-menus in off-canvas navigation
 $(document).ready(function($) {
+    
+    var $m_btn = $('.pay-btn');
+    var $modal = $('#payModal');
+    $m_btn.on('click', function(){
+        $modal.modal({backdrop: 'static'});
+    });
+    
+    // 测试 bootstrap 居中
+    $modal.on('show.bs.modal', function(){
+        var $this = $(this);
+        var $modal_dialog = $this.find('.modal-dialog');
+        // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+        $this.css('display', 'block');
+        $modal_dialog.css({'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
+    });
+	
 	$('.sb-toggle-submenu').off('click') // Stop submenu toggle from closing Slidebars.
 		.on('click', function() {
 			$submenu = $(this).parent().children('.sb-submenu');

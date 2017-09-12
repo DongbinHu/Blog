@@ -3354,3 +3354,22 @@ footer .footer_bottom {
 
 .icon-wuxianxinhao:before { content: "\e631"; }
 /*---------------- END ------------------------*/
+
+
+.pay-box{
+	text-align: center;
+	margin: 50px 0;
+	font-size: 16px;
+}
+
+.pay-box .pay-btn{
+	padding: 5px 25px;
+	border-radius: 24px;
+	border: 0;
+	background-color: #ec6149;
+	color: #fff;
+	outline:none;
+}
+.if-weixin, .if-zhifubao{
+	height: 155px;
+}
