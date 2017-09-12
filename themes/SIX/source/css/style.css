@@ -3373,3 +3373,9 @@ footer .footer_bottom {
 .if-weixin, .if-zhifubao{
 	height: 155px;
 }
+
+@media (max-width:415px) {
+	.if-weixin, .if-zhifubao{
+		height: 130px;
+	}
+}
