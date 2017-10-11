@@ -3374,6 +3374,10 @@ footer .footer_bottom {
 	height: 155px;
 }
 
+#payModal{
+	z-index: 10;
+}
+
 @media (max-width:415px) {
 	.if-weixin, .if-zhifubao{
 		height: 130px;
