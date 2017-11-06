@@ -247,7 +247,7 @@ gulp.watch('six/seven/*.js',function(event){
 });
 ```  
 如下：  
-![刚试了一下，还真管用](/img/1.png)
+![刚试了一下，还真管用](http://oyzg3m24h.bkt.clouddn.com/1.png)
 
 ----------  
 
