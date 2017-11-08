@@ -1,7 +1,7 @@
 ---
 title: 用Markdown画流程图
 date: 2017-06-10 14:58:34
-categories: "Hexo教程"
+categories: 技术
 tags:
 ---
 

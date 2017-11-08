@@ -1,7 +1,7 @@
 ---
 title: gulp学习记录
 date: 2017-06-14 16:56:19
-categories: 前端学习笔记
+categories: 技术
 tags:
 description: 前端构建工具gulp.js的使用介绍及技巧
 ---

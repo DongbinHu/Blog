@@ -1,7 +1,7 @@
 ---
 title: ES6学习笔记（一）
 date: 2017-06-17 09:56:44
-categories: 前端学习笔记
+categories: 技术
 tags:
 description: ES6学习笔记 不定时更新
 ---

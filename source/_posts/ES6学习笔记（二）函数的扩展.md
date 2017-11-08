@@ -1,7 +1,7 @@
 ---
 title: ES6学习笔记（二）函数的扩展
 date: 2017-08-29 10:26:31
-categories: 前端学习笔记
+categories: 技术
 tags:
 description:
 ---

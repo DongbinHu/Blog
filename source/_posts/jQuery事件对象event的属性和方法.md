@@ -1,7 +1,7 @@
 ---
 title: jQuery事件对象event的属性和方法
 date: 2017-08-09 11:05:20
-categories: 前端学习笔记
+categories: 技术
 tags:
 description: jQuery事件对象event的学习总结
 ---
