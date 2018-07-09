@@ -50,6 +50,32 @@
     <script src="<%- config.root %>js/respond.min.js"></script>
     <![endif]-->
 
+  <style>
+    #six-password-box{
+      width:  100%;
+      height:  100%;
+      position:  absolute;
+      border:  1px solid #000;
+      background-color:  #000;
+      z-index: 999;
+    }
+
+    #six-password-box .password-form-box{
+      z-index:  999;
+      background-color:  #fff;
+      margin-top: 20%;
+      border-radius: 8px;
+      -webkit-box-shadow: 0 4px 15px rgba(255, 193, 7, 0.51);
+      -moz-box-shadow: 0 4px 15px rgba(255, 193, 7, 0.51);
+      box-shadow: 0 4px 15px rgba(255, 193, 7, 0.51);
+    }
+    @media (max-width:768px) {
+      #six-password-box .password-form-box{
+        margin-top: 30%;
+      }
+    }
+  </style>
+
   <% if (config.rss) { %>
   <link rel="alternate" type="application/rss+xml" title="RSS" href="<%- config.rss %>">
   <% } %>

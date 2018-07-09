@@ -1,6 +1,35 @@
 $(document).ready(function($) {
     "use strict";
-
+    var url = window.location.href;
+    var boxFlag = true;
+    if(url === 'http://huliuliu.top/'){
+    	$('#six-password-box').show();
+        boxFlag = true;
+	}else{
+        boxFlag = false;
+	}
+	if(boxFlag){
+        var t = setInterval(sixShow,1000);
+	}else{
+        $('#six-password-box').hide();
+	}
+	function sixShow() {
+		if(boxFlag){
+            $('#six-password-box').show();
+		}else{
+            $('#six-password-box').hide();
+			t.close();
+		}
+    }
+    
+    $('#sixSubmitBtn').on('click',function() {
+    	var pwd = $('#sixPassword').val();
+    	if(pwd === 'huliuliu.top'){
+            boxFlag = false;
+		}else{
+    		alert('False!');
+		}
+    });
     $(window).scroll(function () {
         if ($(document).scrollTop() > 10) {
             $(".lightnav .navbar-inner").addClass("lightnav-alt");
