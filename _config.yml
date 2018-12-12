@@ -78,8 +78,8 @@ theme: SIX
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-#  repository: https://github.com/DongbinHu/DongbinHu.github.io.git
-  repository: git@github.com:DongbinHu/DongbinHu.github.io.git
+  repository: https://github.com/DongbinHu/DongbinHu.github.io.git
+#  repository: git@github.com:DongbinHu/DongbinHu.github.io.git
   branch: master
 
 #流程图插件
