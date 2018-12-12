@@ -1,35 +1,35 @@
 $(document).ready(function($) {
     "use strict";
-    var url = window.location.href;
-    var boxFlag = true;
-    if(url === 'http://huliuliu.top/'){
-    	$('#six-password-box').show();
-        boxFlag = true;
-	}else{
-        boxFlag = false;
-	}
-	if(boxFlag){
-        var t = setInterval(sixShow,1000);
-	}else{
-        $('#six-password-box').hide();
-	}
-	function sixShow() {
-		if(boxFlag){
-            $('#six-password-box').show();
-		}else{
-            $('#six-password-box').hide();
-			t.close();
-		}
-    }
-    
-    $('#sixSubmitBtn').on('click',function() {
-    	var pwd = $('#sixPassword').val();
-    	if(pwd === 'huliuliu.top'){
-            boxFlag = false;
-		}else{
-    		alert('False!');
-		}
-    });
+    // var url = window.location.href;
+    // var boxFlag = true;
+    // if(url === 'http://huliuliu.top/'){
+    // 	$('#six-password-box').show();
+    //     boxFlag = true;
+	// }else{
+    //     boxFlag = false;
+	// }
+	// if(boxFlag){
+    //     var t = setInterval(sixShow,1000);
+	// }else{
+    //     $('#six-password-box').hide();
+	// }
+	// function sixShow() {
+	// 	if(boxFlag){
+    //         $('#six-password-box').show();
+	// 	}else{
+    //         $('#six-password-box').hide();
+	// 		t.close();
+	// 	}
+    // }
+    //
+    // $('#sixSubmitBtn').on('click',function() {
+    // 	var pwd = $('#sixPassword').val();
+    // 	if(pwd === 'huliuliu.top'){
+    //         boxFlag = false;
+	// 	}else{
+    // 		alert('False!');
+	// 	}
+    // });
     $(window).scroll(function () {
         if ($(document).scrollTop() > 10) {
             $(".lightnav .navbar-inner").addClass("lightnav-alt");
@@ -200,7 +200,7 @@ $(document).ready(function($) {
 	    }
 
 	}); // Document Ready
-	
+
 	$('.pay-btn').click(function() {
 		// alert(123);
     })
@@ -209,13 +209,13 @@ $(document).ready(function($) {
 
 // Enable dropdown sub-menus in off-canvas navigation
 $(document).ready(function($) {
-    
+
     var $m_btn = $('.pay-btn');
     var $modal = $('#payModal');
     $m_btn.on('click', function(){
         $modal.modal({backdrop: 'static'});
     });
-    
+
     // 测试 bootstrap 居中
     $modal.on('show.bs.modal', function(){
         var $this = $(this);
@@ -224,7 +224,7 @@ $(document).ready(function($) {
         $this.css('display', 'block');
         $modal_dialog.css({'margin-top': Math.max(0, ($(window).height() - $modal_dialog.height()) / 2) });
     });
-	
+
 	$('.sb-toggle-submenu').off('click') // Stop submenu toggle from closing Slidebars.
 		.on('click', function() {
 			$submenu = $(this).parent().children('.sb-submenu');
