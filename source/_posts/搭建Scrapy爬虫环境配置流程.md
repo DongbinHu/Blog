@@ -14,21 +14,21 @@ description:
 
 1.1. 双击执行附件中Python安装文件“python-2.7.14.amd64.msi”,按提示安装即可，如果安装期间更改了默认的安装位置，一定要记住，因为配置path时要用到。  
 1.2. 默认路径是C:\Python27，以默认配置为例将 C:\Python27;C:\Python27\Scripts;两个路径加入电脑的环境变量，这样打开cmd，输入命令 python，如下图显示即为安装成功：
-![Python测试](http://oyzg3m24h.bkt.clouddn.com/Python-test.png)  
+![Python测试](https://s1.ax1x.com/2018/12/13/Ft5aFA.png)
 
 --------------------------------------  
 
 ## 2、安装lxml  
 
 打开cmd，执行命令`pip install lxml`，等待自动安装完成，出现下图即为安装成功：  
-![lxml测试](http://oyzg3m24h.bkt.clouddn.com/lxml-test.png)  
+![lxml测试](https://s1.ax1x.com/2018/12/13/Ft5Nod.png)
 
 ---------------------------------------  
 
 ## 3、安装zope.interface  
 
 继续执行命令`pip install zope.interface`，等待自动安装完成，出现下图即为安装成功：  
-![lxml测试](http://oyzg3m24h.bkt.clouddn.com/zope.interface-test.png)  
+![zope.interface安装](https://s1.ax1x.com/2018/12/13/Ft5wWt.png)
 
 ----------------------------------------  
 
@@ -55,8 +55,8 @@ description:
 
 ## 7、安装Scrapy  
 
-打开cmd，执行命令pip install Scrapy，等待自动安装完成，出现下图即为安装成功：  
-![lxml测试](http://oyzg3m24h.bkt.clouddn.com/zope.interface-test.png)  
+打开cmd，执行命令 `pip install Scrapy`，等待自动安装完成，在控制台输入：`scrapy`，出现下图即为安装成功：
+![scrapy测试](https://s1.ax1x.com/2018/12/13/Ft5dJI.png)
 
 ------------------------------------------  
 
