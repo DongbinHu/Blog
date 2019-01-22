@@ -846,7 +846,7 @@ span.sb-caret { /* Caret Down */
 	padding-top: 0;
 }
 #hero h2 {
-	color: #151515;
+	color: #fedb01;
 	margin-bottom: 20px;
 	display: inline-block;
 	padding: 14px;
@@ -876,19 +876,6 @@ span.sb-caret { /* Caret Down */
   }
 	#hero p {
 		display: none
-	}
-  #hero h2 {
-    font-weight:100 !important;
-  }
-	#hero h2 {
-		color: #f0f0f0;
-		margin-bottom: 10px;
-		display: inline-block;
-		padding: 14px;
-	}
-	#hero .element-img {
-    background: url(../img/bg_img_s.jpg) no-repeat center center fixed !important;
-    background-size: cover !important;
 	}
 }
 /********************************************************/
